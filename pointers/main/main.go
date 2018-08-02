@@ -12,4 +12,8 @@ func main() {
 	fmt.Println("Value and address: ", a, &a)
 	var b *int = &a
 	fmt.Println("Address, value and the pointer value of b: ", b, &b, *b)
+	// Changing the value
+	*b = 400
+	fmt.Println("Value and address: ", a, &a)
+	fmt.Println("Address, value and the pointer value of b: ", b, &b, *b)
 }
