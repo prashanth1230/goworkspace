@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+func alterValue(z *int) {
+	*z = 10000
+}
+
 func main() {
 	x := 20
 	fmt.Println("Value of a and memory location of a are: ", x, &x)
@@ -16,4 +20,8 @@ func main() {
 	*b = 400
 	fmt.Println("Value and address: ", a, &a)
 	fmt.Println("Address, value and the pointer value of b: ", b, &b, *b)
+
+	fmt.Println("x before altering ", x)
+	alterValue(&x)
+	fmt.Println("x after altering ", x)
 }
