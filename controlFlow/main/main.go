@@ -17,4 +17,27 @@ func main() {
 	default:
 		fmt.Println("Hello")
 	}
+	fallThrough(name)
+}
+
+func fallThrough(name string) {
+	switch name {
+	case "Prashanth":
+		fmt.Println("Prashanth hi!")
+		fallthrough
+	case "Shruthi":
+		fmt.Println("Shruthi hi!")
+	default:
+		fmt.Println("Hi!")
+	}
+	multipleSwitch(name)
+}
+
+func multipleSwitch(name string) {
+	switch name {
+	case "Prashanth", `Shruthi`:
+		fmt.Println("Hello both")
+	case "shashank":
+		fmt.Println("Hello Shashank")
+	}
 }
