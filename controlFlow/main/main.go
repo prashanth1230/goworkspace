@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	SwitchOnType "../switchOnType"
+	"fmt"
+)
 
 func main() {
 	for i := 0; i < 10; i++ {
@@ -18,6 +21,7 @@ func main() {
 		fmt.Println("Hello")
 	}
 	fallThrough(name)
+	SwitchOnType.SwitchOnType(true)
 }
 
 func fallThrough(name string) {
