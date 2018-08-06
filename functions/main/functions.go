@@ -9,6 +9,13 @@ func main() {
 	// Variadic arguments
 	data := []float64{11, 33.2, 2, 43.1, 4}
 	fmt.Println(average(data...))
+
+	// Func expressions
+	greeting := func() {
+		fmt.Println("Printing from a func expression")
+	}
+
+	greeting()
 }
 
 // Named return
