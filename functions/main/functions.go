@@ -6,6 +6,9 @@ func main() {
 	fmt.Println(greet1("Prashanth"))
 	fmt.Println(greet2("Shruthi", "Shashank"))
 	fmt.Println(average(11, 22.0, 24, 45, 21.3))
+	// Variadic arguments
+	data := []float64{11, 33.2, 2, 43.1, 4}
+	fmt.Println(average(data...))
 }
 
 // Named return
