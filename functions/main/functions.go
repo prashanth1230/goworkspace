@@ -16,6 +16,9 @@ func main() {
 	}
 
 	greeting()
+
+	varFunction := makeGreeting()
+	fmt.Println(varFunction())
 }
 
 // Named return
@@ -36,4 +39,13 @@ func average(sf ...float64) float64 {
 		total += v
 	}
 	return total / float64(len(sf))
+}
+
+// Function returning a function
+func makeGreeting() func() string {
+	x := "Prsht"
+	return func() string {
+		// Utilizing the outer variable makes it closure
+		return "Deep value utilizing the outer value " + x
+	}
 }
